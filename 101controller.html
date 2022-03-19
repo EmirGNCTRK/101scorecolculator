@@ -5,7 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./controler.css">
+    <style>
+        body{
+    color: white;
+    background-image:url("https://www.teahub.io/photos/full/54-543287_1080x1920-samsung-galaxy-s5-wallpapers-simple-galaxy.jpg");    
+    background-size: 100%;
+    
+    font-size: 1rem;
+    
+}
+
+/* .elo{
+    
+} */
+.container{
+    
+    background-size: auto ;
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows: 20rem 7rem;
+    width: 100%;
+    /* text-align: center; */
+}
+.content{
+    border:2px solid aquamarine;
+}
+.content1-2{
+    font-size:1rem ;
+    
+}
+.contenth1{
+    grid-column: 1/3;
+    text-align: center;
+   
+    
+    
+}
+
+.Form, .Form2{
+    text-align: center;
+}
+
+/* .btn-success1{
+    margin-right: 70px;
+
+}
+
+.inputclass2{
+    margin-left: 40px;
+} */
+
+.content1{
+    grid-area: 1 / 1 / 1 / 2;
+}
+
+.content2{
+    grid-area: 1 / 2 / 1 / 2;
+}
+
+.content3 ,.content4{
+    text-align: center;
+    background-color: rgba(128, 255, 0, 0.459);
+    font-size: 2rem;
+}
+
+.content5 , .content6{
+    text-align: center;
+}
+
+#el{
+    text-align: center;
+}
+.forma{
+    font-size: 2rem;
+}
+
+/* .content29{
+    grid-row: 1/20 ;
+    border: none;
+}
+.content28{
+    grid-row: 1/20;
+    grid-column: 5;
+    border: none;
+}
+.content4 , .content3 , .content2{
+    background-color: rgb(42, 75, 165);
+}
+#ana{
+    
+} */
+
+.abcd{
+    display: none;
+}
+
+
+    </style>
 </head>
 <body>
   <div class="" id="ana">  
@@ -46,7 +142,58 @@
 <p id="el"></p>
 
 
+<script>
+    var takım1 = 0 ;
+var takım2 = 0 ;
+var el = 1 ;
 
-<script src="./controller.js"></script>
+// let button = document.querySelector(".btn-danger");
+// setInterval(function(){
+//     button.click()
+// },1)
+
+let formDOM = document.querySelector("#Form")
+formDOM.addEventListener("submit",puan)
+
+function puan(event){
+    event.preventDefault()
+    let girdi = document.querySelector("#input1").value
+    // console.log(girdi);
+    takım1 += parseInt(girdi) ;
+    // console.log(takım1);
+    localStorage.getItem(input1,girdi.value)
+    document.querySelector(".con3").innerHTML = takım1;
+    
+    document.querySelector(".con1").innerHTML +=`${el}.el/${girdi}--`
+    document.getElementById("Form").style.display = "none";
+    document.getElementById("Form2").style.display = "";
+    let button = document.querySelector(".abcd");
+    button.click()
+    
+    
+    
+}
+
+let formDOM2 = document.querySelector("#Form2")
+formDOM2.addEventListener("submit",puan2)
+
+function puan2(event2){
+    event2.preventDefault()
+    let girdi2 = document.querySelector("#input2").value
+    // console.log(girdi2);
+    takım2 += parseInt(girdi2) ;
+    // console.log(takım2);
+    localStorage.getItem(input2,girdi2.value)
+    document.querySelector(".con4").innerHTML = takım2;
+    document.querySelector(".con2").innerHTML += `${el}.el/${girdi2}--`
+    el +=1
+    document.getElementById("Form2").style.display = "none";
+    document.getElementById("Form").style.display = "";
+    let button2 = document.querySelector(".btn-danger2");
+    button2.click()
+    document.querySelector("#el").innerHTML = `${el-1}.el bitti`
+}
+
+</script>
 </body>
 </html>
