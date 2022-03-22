@@ -35,7 +35,7 @@ function puan(event){
 
         if(say > 0){
             takım1 += parseInt(girdi) ;
-            document.querySelector(".con1").innerHTML +=`____${el}.el=(${girdi})|!|`
+            document.querySelector(".con1").innerHTML +=`${el}.el=(${girdi})|!|-`
             let button = document.querySelector(".abcd");button.click()
             document.querySelector("#takımsay").innerHTML = "TEAM 2"
             document.querySelector(".con3").innerHTML = takım1;
@@ -43,7 +43,7 @@ function puan(event){
         }
         else{
             takım2 += parseInt(girdi) ;
-            document.querySelector(".con2").innerHTML +=`____${el}.el=(${girdi})|!|`
+            document.querySelector(".con2").innerHTML +=`${el}.el=(${girdi})|!|-`
             let button = document.querySelector(".abcd");button.click()
             document.querySelector(".con4").innerHTML = takım2;
             document.querySelector("#takımsay").innerHTML = "TEAM 1"
