@@ -167,7 +167,7 @@ function puan(event){
     localStorage.getItem(input1,girdi.value)
     document.querySelector(".con3").innerHTML = takım1;
     
-    document.querySelector(".con1").innerHTML +=`${el}.el/${girdi}--`
+    document.querySelector(".con1").innerHTML +=`${el}.el=(${girdi})|!|   `
     document.getElementById("Form").style.display = "none";
     document.getElementById("Form2").style.display = "";
     let button = document.querySelector(".abcd");
@@ -188,7 +188,7 @@ function puan2(event2){
     // console.log(takım2);
     localStorage.getItem(input2,girdi2.value)
     document.querySelector(".con4").innerHTML = takım2;
-    document.querySelector(".con2").innerHTML += `${el}.el/${girdi2}--`
+    document.querySelector(".con2").innerHTML += `${el}.el=(${girdi2})|!|   `
     el +=1
     document.getElementById("Form2").style.display = "none";
     document.getElementById("Form").style.display = "";
@@ -200,3 +200,5 @@ function puan2(event2){
 </script>
 </body>
 </html>
+
+
