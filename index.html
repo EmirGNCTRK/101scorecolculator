@@ -5,202 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-    color: white;
-    background-image:url("https://whatsappturk.com/wp-content/uploads/2020/01/iphone-ios-dark-mode.jpg");    
-    background-size: 100%;
-    
-    font-size: 1rem;
-    
-}
-
-/* .elo{
-    
-} */
-.container{
-    
-    background-size: auto ;
-    display: grid;
-    grid-template-columns:50% 50%;
-    grid-template-rows: 20rem 7rem;
-    width: 100%;
-    /* text-align: center; */
-    
-}
-.content{
-    border:3px solid rgb(121, 105, 189);
-    border-radius: 20px;
-}
-.content1-2{
-    font-size:1rem ;
-    
-}
-.contenth1{
-    grid-column: 1/3;
-    text-align: center;
-   
-    
-    
-}
-
-.Form, .Form2{
-    text-align: center;
-}
-
-/* .btn-success1{
-    margin-right: 70px;
-
-}
-
-.inputclass2{
-    margin-left: 40px;
-} */
-
-.content1{
-    grid-area: 1 / 1 / 10 / 2;
-}
-
-.content2{
-    grid-area: 1 / 2 / 10 / 2;
-}
-
-.content3 ,.content4{
-    text-align: center;
-    background-color: rgba(255, 72, 0, 0.459);
-    font-size: 4rem;
-    
-    
-}
-
-.content5 , .content6{
-    text-align: center;
-    font-size: 2rem;
-}
-
-#el{
-    text-align: center;
-}
-.forma{
-    font-size: 2rem;
-}
-
-/* .content29{
-    grid-row: 1/20 ;
-    border: none;
-}
-.content28{
-    grid-row: 1/20;
-    grid-column: 5;
-    border: none;
-}
-.content4 , .content3 , .content2{
-    background-color: rgb(42, 75, 165);
-}
-#ana{
-    
-} */
-
-.abcd{
-    display: none;
-}
-
-
-    </style>
+    <link rel="stylesheet" href="./controler.css">
 </head>
 <body>
-  <div class="" id="ana">  
+    <div class="" id="ana">  
       
-    <div class="content contenth1"><h1>GAME SCORE CALTULATOR</h1></div>
-    <div class="elo" aling=" center">
-        <div class="container" >
-            <div class="content content1 content1-2"><p class="con1"></p></div>
-            <div class="content content2 content1-2"><p class="con2"></p></div>
-            <div class="content content3"><p class="con3">0</p></div>
-            <div class="content content4"><p class="con4">0</p></div>
-            <div class="content content5" id="con">TEAM 1</div>
-            <div class="content content6" id="con">TEAM 2</div>
-            
-            </div>    
+        <div class="content contenth1"><h1>GAME SCORE CALTULATOR</h1></div>
+        <div class="elo" aling=" center">
+            <div class="container" >
+                <div class="content content1 content1-2"><p class="con1"></p></div>
+                <div class="content content2 content1-2"><p class="con2"></p></div>
+                <div class="content content3"><p class="con3">0</p></div>
+                <div class="content content4"><p class="con4">0</p></div>
+                <div class="content content5" id="con">TEAM 1</div>
+                <div class="content content6" id="con">TEAM 2</div>
+                
+                </div>    
+            </div>
         </div>
+                <div >
+                    <form action="" class="forma Form" id="Form" >
+                        <p id="takımsay" >TEAM 1</p>
+                        <input type="number" value="" id="input" class="inputclass inputclass1">
+                        <button type="submit" class="btn btn-success1">OK</button>
+                        <button type="reset" class="btn btn-danger1 abcd">reset</button>
+                    </form>
+                </div>
+<!--                 
+                <div>
+                    <form style="display: none;" action="" class="forma Form2" id="Form2" >
+                        <p>Takım2</p>
+                        <input type="number" value="" id="input2" class="inputclass inputclass2">
+                        <button type="submit" class="btn btn-success">OK</button>
+                        <button type="reset" class="btn btn-danger2 abcd">reset</button>
+                    </form> 
+                </div> -->
+                    
+                    
     </div>
-            <div >
-                <form action="" class="forma Form" id="Form" >
-                    <p>Takım1</p>
-                    <input type="number" value="" id="input1" class="inputclass inputclass1">
-                    <button type="submit" class="btn btn-success1">OK</button>
-                    <button type="reset" class="btn btn-danger1 abcd">reset</button>
-                </form>
-            </div>
-            
-            <div>
-                <form style="display: none;" action="" class="forma Form2" id="Form2" >
-                    <p>Takım2</p>
-                    <input type="number" value="" id="input2" class="inputclass inputclass2">
-                    <button type="submit" class="btn btn-success">OK</button>
-                    <button type="reset" class="btn btn-danger2 abcd">reset</button>
-                </form>
-            </div>
-                
-                
-</div>
-<p id="el"></p>
-
-
-<script>
-    var takım1 = 0 ;
-var takım2 = 0 ;
-var el = 1 ;
-
-// let button = document.querySelector(".btn-danger");
-// setInterval(function(){
-//     button.click()
-// },1)
-
-let formDOM = document.querySelector("#Form")
-formDOM.addEventListener("submit",puan)
-
-function puan(event){
-    event.preventDefault()
-    let girdi = document.querySelector("#input1").value
-    // console.log(girdi);
-    takım1 += parseInt(girdi) ;
-    // console.log(takım1);
-    localStorage.getItem(input1,girdi.value)
-    document.querySelector(".con3").innerHTML = takım1;
+    <p id="el"></p>
     
-    document.querySelector(".con1").innerHTML +=`${el}.el=(${girdi})|!|   `
-    document.getElementById("Form").style.display = "none";
-    document.getElementById("Form2").style.display = "";
-    let button = document.querySelector(".abcd");
-    button.click()
-    
-    
-    
-}
 
-let formDOM2 = document.querySelector("#Form2")
-formDOM2.addEventListener("submit",puan2)
+<br><br>
 
-function puan2(event2){
-    event2.preventDefault()
-    let girdi2 = document.querySelector("#input2").value
-    // console.log(girdi2);
-    takım2 += parseInt(girdi2) ;
-    // console.log(takım2);
-    localStorage.getItem(input2,girdi2.value)
-    document.querySelector(".con4").innerHTML = takım2;
-    document.querySelector(".con2").innerHTML += `${el}.el=(${girdi2})|!|   `
-    el +=1
-    document.getElementById("Form2").style.display = "none";
-    document.getElementById("Form").style.display = "";
-    let button2 = document.querySelector(".btn-danger2");
-    button2.click()
-    document.querySelector("#el").innerHTML = `${el-1}.el bitti`
-}
-
-</script>
+<script src="./app.js"></script>
 </body>
 </html>
-
-
