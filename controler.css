@@ -101,11 +101,14 @@ body{
 #takımsay{
     color: rgb(6, 158, 13);
     background-color: rgba(210, 30, 30, 0.671);
-    margin-left: 40%;
-    margin-right: 40%;
+    /* width: 25rem ; */
     border-radius: 35px;
     font-size: 3rem;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
+    
+    
+    
+    
 }
 #scoretab{
     font-size: 2.3rem;
@@ -135,4 +138,6 @@ body{
 .con1 , .con2 {
     margin-top: 1rem;
 }
-
+#orta{
+    text-align: center;
+}

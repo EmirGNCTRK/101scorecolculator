@@ -53,7 +53,7 @@ function puan(event){
             say += 2
             el += 1
             document.querySelector("#el").innerHTML = `${el-1}.el bitti`
-            tablo+=2.3
+            tablo+=2.25
             document.querySelector(".con1").style.backgroundcolor = "red"
             
         }
