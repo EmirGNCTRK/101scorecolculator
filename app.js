@@ -1,7 +1,9 @@
-var takım1 = 0 ;
-var takım2 = 0 ;
-var el = 1 ;
-var say = 1 ;
+let takım1 = 0 ;
+let takım2 = 0 ;
+let el = 1 ;
+let say = 1 ;
+let tablo = 3;
+let renk =1;
 
 let formDOM = document.querySelector("#Form")
 formDOM.addEventListener("submit",puan)
@@ -35,21 +37,25 @@ function puan(event){
 
         if(say > 0){
             takım1 += parseInt(girdi) ;
-            document.querySelector(".con1").innerHTML +=`${el}.el=(${girdi})|!|-`
+            document.querySelector(".con1").innerHTML +=`${el}.el=(${girdi})|!|<br><hr>`
             let button = document.querySelector(".abcd");button.click()
             document.querySelector("#takımsay").innerHTML = "TEAM 2"
             document.querySelector(".con3").innerHTML = takım1;
+            document.querySelector("#container").style.gridTemplateRows = `${tablo}rem 0rem 9rem 3rem 0rem`
             say += -2
         }
         else{
             takım2 += parseInt(girdi) ;
-            document.querySelector(".con2").innerHTML +=`${el}.el=(${girdi})|!|-`
+            document.querySelector(".con2").innerHTML +=`${el}.el=(${girdi})|!|<br><hr>`
             let button = document.querySelector(".abcd");button.click()
             document.querySelector(".con4").innerHTML = takım2;
             document.querySelector("#takımsay").innerHTML = "TEAM 1"
             say += 2
             el += 1
             document.querySelector("#el").innerHTML = `${el-1}.el bitti`
+            tablo+=2.3
+            document.querySelector(".con1").style.backgroundcolor = "red"
+            
         }
         
     }

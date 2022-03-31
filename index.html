@@ -12,7 +12,7 @@
       
         <div class="content contenth1"><h1>GAME SCORE CALTULATOR</h1></div>
         <div class="elo" aling=" center">
-            <div class="container" >
+            <div class="container" id="container" style="grid-template-rows: 3rem 0rem 9rem 3rem 0rem ;" >
                 <div class="content content1 content1-2"><p class="con1"></p></div>
                 <div class="content content2 content1-2"><p class="con2"></p></div>
                 <div class="content content3"><p id="scoretab">SCORE:</p><p class="con3">0</p></div>
@@ -25,9 +25,11 @@
         </div>
                 <div >
                     <form action="" class="forma Form" id="Form" >
-                        <p id="takımsay" >TEAM 1</p>
-                        <input type="number" value="" id="input" class="inputclass inputclass1">
-                        <button type="submit" class="btn btn-success1">OK</button>
+                        <div>
+                            <p id="takımsay" >TEAM 1</p>
+                        </div>
+                        <input type="number" value="" id="input" class="inputclass inputclass1" >
+                        <button type="submit" class="btn btn-success1" id="ok">OK</button>
                         <button type="reset" class="btn btn-danger1 abcd">reset</button>
                     </form>
                 </div>
